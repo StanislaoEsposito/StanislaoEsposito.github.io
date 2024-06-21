@@ -10,11 +10,18 @@
 <body>
     <header>
         <img src="img/gd.png" alt="Logo della testata giornalistica" class="logo">
-        <h1>Testata Giornalistica</h1>
-        <nav>
-            <a href="index.html" class="home-button">Home</a>
-        </nav>
+        <h1>GD News</h1>
+        <a href="index.html" class="home-button">Home</a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
     </header>
+    <nav class="side-menu" id="sideMenu">
+        <button class="close-button" onclick="toggleMenu()">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.youtube.com" target="_blank">YouTube</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </nav>
     <main id="article-content">
         <!-- Contenuto dell'articolo verrà caricato qui -->
     </main>
