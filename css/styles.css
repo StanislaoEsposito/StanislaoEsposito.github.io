@@ -7,7 +7,7 @@ body {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #FF7F50; /* Cambiato a un arancione gradevole */
     color: white;
     padding: 1em;
     display: flex;
@@ -17,8 +17,8 @@ header {
 }
 
 header .logo {
-    width: 100px; /* Dimensione aumentata */
-    height: 100px; /* Dimensione aumentata */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
 
@@ -28,26 +28,67 @@ header h1 {
     margin: 0;
 }
 
-header nav {
-    margin-left: auto;
+header .menu-toggle {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
 header .home-button {
-    background-color: #4CAF50; /* Cambiato colore di sfondo */
-    color: white; /* Colore del testo */
-    border: none; /* Rimosso il bordo */
-    padding: 0.5em 1.5em; /* Aumentato il padding */
-    border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s; /* Aggiunta transizione */
-    font-size: 1em; /* Dimensione del testo */
-    font-weight: bold; /* Grassetto */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunto ombra */
+    background-color: white; /* Cambiato a sfondo bianco per contrasto */
+    color: #FF7F50; /* Testo in arancione */
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header .home-button:hover {
-    background-color: #45a049; /* Colore al passaggio */
-    transform: scale(1.05); /* Effetto di ingrandimento */
+    background-color: #FF7F50; /* Cambiato a sfondo arancione per hover */
+    color: white; /* Testo bianco per hover */
+}
+
+/* Menu laterale */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FF7F50; /* Cambiato a un arancione gradevole */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #FF6347; /* Colore arancione scuro per hover */
+}
+
+.side-menu .close-button {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2em;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 /* Main */
@@ -94,21 +135,21 @@ main#article-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 1em;
-    text-align: justify; /* Testo giustificato */
+    text-align: justify;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #FF7F50; /* Cambiato a un arancione gradevole */
     color: white;
     text-align: center;
-    padding: 1em; /* Ridotta */
+    padding: 1em;
     margin-top: 2em;
 }
 
 footer .footer-logo {
-    width: 100px; /* Dimensione aumentata */
-    height: 100px; /* Dimensione aumentata */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin-bottom: 1em;
 }
@@ -120,8 +161,8 @@ footer .social-icons {
 }
 
 footer .social-icons img {
-    width: 30px; /* Dimensione ridotta */
-    height: 30px; /* Dimensione ridotta */
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -132,29 +173,21 @@ footer .social-icons img:hover {
 
 /* Media Queries per il Design Responsivo */
 @media (max-width: 600px) {
+    header .menu-toggle {
+        display: block;
+    }
+
     header h1 {
         font-size: 1.2em;
     }
 
     header .logo {
-        width: 80px; /* Adattato per dispositivi più piccoli */
-        height: 80px; /* Adattato per dispositivi più piccoli */
+        width: 80px;
+        height: 80px;
     }
 
     footer .footer-logo {
-        width: 80px; /* Adattato per dispositivi più piccoli */
-        height: 80px; /* Adattato per dispositivi più piccoli */
-    }
-}
-
-@media (min-width: 600px) {
-    #articles {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
-
-@media (min-width: 900px) {
-    #articles {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        width: 80px;
+        height: 80px;
     }
 }
